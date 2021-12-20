@@ -1,0 +1,70 @@
+﻿@model List<Services>
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description"><a class="btn btn-primary btn-lg" asp-area="Admin" asp-controller="Services" asp-action="Create">Services</a></p>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="text-center">
+                        <tr>
+                            <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
+                                #
+                            </th>
+                            <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
+                                Image
+                            </th>
+                            <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
+                                Title
+                            </th>
+                            <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
+                                Logo
+                            </th>
+                            <th style="color: midnightblue !important; font-weight: 600 !important; font-size: 20px !important;">
+                                Content
+                            </th>                         
+                        </tr>
+                    </thead>
+                    @{
+                        int counter = 0;
+                        foreach (var item in Model)
+                        {
+                            counter++;
+                            <tbody class="text-center">
+                                <tr>
+                                    <td style="font-size: 18px !important;">
+                                        @counter
+                                    </td>
+                                    <td class="py-1" style="font-size: 18px !important;">
+                                        <img src="~/img/teacher/@item.Page" alt="image" style="width: 80px !important; height: 80px !important;" />
+                                    </td>
+                                    <td style="font-size: 18px !important;">
+                                        @item.Title 
+                                    </td>
+                                    <td style="font-size: 18px !important;">
+                                        <img src="~/images/icons/@item.Logo" alt="image" style="width: 80px !important; height: 80px !important;" />
+                                    </td>
+                                    <td style="font-size: 18px !important;">
+                                        @item.Content
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a class="btn btn-success btn-sm" style="width: 100px;" asp-area="Admin" asp-controller="Services" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                        <a class="btn btn-danger btn-sm my-2" style="width: 100px;" asp-area="Admin" asp-controller="Services" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete this data?')">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

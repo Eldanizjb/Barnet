@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewData["Title"] = "Contact Index";
+}
+
+
+<!-- Page title -->
+<section class="page-title" style="background-image:url(images/background/3.jpg)">
+    <div class="container">
+        <div class="outer-box">
+            <h1>Contact Us</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="~/index.html">Home</a></li>
+                <li class="active">Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- map section -->
+<section class="map-section sp-four">
+    <div class="container">
+        <div class="home-google-map">
+            <div class="google-map"
+                 id="contact-google-map"
+                 data-map-lat="54.194328"
+                 data-map-lng="-2.916747"
+                 data-icon-path="images/icons/map-marker.png"
+                 data-map-title="Chester"
+                 data-map-zoom="11">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Contact section -->
+<section class="contact-section sp-six">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-info">
+                    <h2>We’re Happy to Discuss <br> Your Project  and Answer <br>any Question</h2>
+                    <div class="contact-info-block">
+                        <h5>Address</h5>
+                        <div class="text">77408 Satterfield Motorway Suite 469 New Antonetta, BC K3L6P6</div>
+                    </div>
+                    <div class="contact-info-block">
+                        <h5>Email</h5>
+                        <div class="text">hello@example.com</div>
+                    </div>
+                    <div class="contact-info-block">
+                        <h5>Phone</h5>
+                        <div class="text">(+081) 325 665 9487</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="default-form-area">
+                    <div class="sec-title light mb-20">
+                        <h1>Let’s Start <br>The Conversation.</h1>
+                    </div>
+                    <form id="contact-form" name="contact_form" class="contact-form style-seven" action="http://html.commonsupport.xyz/2019/Barnet/inc/sendmail.php" method="post">
+                        <div class="row clearfix">
+                            <div class="col-md-6 column">
+                                <div class="form-group">
+                                    <input type="text" name="form_name" class="form-control" value="" placeholder="Your Name" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 column">
+                                <div class="form-group">
+                                    <input type="email" name="form_email" class="form-control required email" value="" placeholder="Email" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 column">
+                                <div class="form-group">
+                                    <input type="text" name="form_phone" class="form-control" value="" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="col-md-6 column">
+                                <div class="form-group">
+                                    <input type="text" name="form_subject" class="form-control" value="" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-md-12 column">
+                                <div class="form-group">
+                                    <textarea name="form_message" class="form-control textarea required" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-section-btn">
+                            <div class="form-group style-two">
+                                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                <button class="theme-btn btn-style-two" type="submit" data-loading-text="Please wait...">Submit Here</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- End form -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Subscribe section -->
+<section class="subscribe-section">
+    <div class="container">
+        <div class="outer-box">
+            <div class="row">
+                <div class="title-column col-lg-6">
+                    <h2>Subscribe <br>to Our Newsletter</h2>
+                </div>
+                <div class="subscribe-form col-lg-6">
+                    <form method="post" action="http://html.commonsupport.xyz/2019/Barnet/contact.html">
+                        <div class="form-group">
+                            <input type="email" name="email" value="" placeholder="Your email..." required="">
+                            <button type="submit" class="theme-btn btn-style-six">Subscribe Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
